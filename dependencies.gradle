@@ -1,0 +1,116 @@
+def supportVersion = "27.0.0"
+def rxBindingVersion = "0.4.0"
+def retrofitVersion = "2.2.0"
+def okHttpVersion = "3.7.0"
+def stethoVersion = "1.5.0"
+def butterKnifeVersion = "8.5.1"
+def daggerVersion = "2.8"
+def ormLiteVersion = "4.48"
+def fastJsonVersion = "1.1.60.android"
+
+project.ext {
+    android = [
+            compileSdkVersion: 26,
+            buildToolsVersion: "26.0.2",
+            applicationId    : "com.gurunzhixun.watermeter",
+            minSdkVersion    : 15,
+            targetSdkVersion : 26,
+            versionCode      : 1,
+            versionName      : "1.0",
+
+
+            VSupportSdk      : '24.2.0',
+            VRetrofitSdk     : "2.2.0",
+            VOkhttp          : "3.4.2",
+            VRxlifecycle     : "2.0.1"
+    ]
+
+    dependencies = [
+            //android-support
+            "support-v4"                     : "com.android.support:support-v4:${supportVersion}",
+            "appcompat-v7"                   : "com.android.support:appcompat-v7:${supportVersion}",
+            "design"                         : "com.android.support:design:${supportVersion}",
+            "recyclerview"                   : "com.android.support:recyclerview-v7:${supportVersion}",
+            "cardview"                       : "com.android.support:cardview-v7:${supportVersion}",
+
+            //java8-support
+            "stream"                         : "com.annimon:stream:1.0.8",
+
+            //rx
+            "rxandroid"                      : "io.reactivex:rxandroid:1.2.1",
+            "rxbinding"                      : "com.jakewharton.rxbinding:rxbinding:${rxBindingVersion}",
+            "rxbinding-support-v4"           : "com.jakewharton.rxbinding:rxbinding-support-v4:${rxBindingVersion}",
+            "rxbinding-appcompat-v7"         : "com.jakewharton.rxbinding:rxbinding-appcompat-v7:${rxBindingVersion}",
+            "rxbinding-design"               : "com.jakewharton.rxbinding:rxbinding-design:${rxBindingVersion}",
+            "rxbinding-recyclerview-v7"      : "com.jakewharton.rxbinding:rxbinding-recyclerview-v7:${rxBindingVersion}",
+
+            //retrofit
+            "retrofit"                       : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            "adapter-rxjava"                 : "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}",
+
+            //dagger
+            "dagger"                         : "com.google.dagger:dagger:${daggerVersion}",
+            "dagger-compiler"                : "com.google.dagger:dagger-compiler:${daggerVersion}",
+
+            //facebook
+            "stetho"                         : "com.facebook.stetho:stetho:${stethoVersion}",
+            "stetho-okhttp3"                 : "com.facebook.stetho:stetho-okhttp3:${stethoVersion}",
+
+            //others
+            "okhttp3-logging-interceptor"    : "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}",
+            "ormlite-android"                : "com.j256.ormlite:ormlite-android:${ormLiteVersion}",
+            "fastjson"                       : "com.alibaba:fastjson:${fastJsonVersion}",
+            "butterknife"                    : "com.jakewharton:butterknife:${butterKnifeVersion}",
+            "butterknife-compiler"           : "com.jakewharton:butterknife-compiler:${butterKnifeVersion}",
+            "retrofit2-fastjson-converter"   : "com.github.BaronZ88:Retrofit2-FastJson-Converter:1.2",
+            "SmartRefreshLayout"             : "com.scwang.smartrefresh:SmartRefreshLayout:1.0.3",
+            "SmartRefreshHeader"             : "com.scwang.smartrefresh:SmartRefreshHeader:1.0.3",
+
+            "annotations"                    : "com.android.support:support-annotations:${android["VSupportSdk"]}",
+            "recyclerview-v7"                : "com.android.support:recyclerview-v7:${android["VSupportSdk"]}",
+            "gridlayout-v7"                  : "com.android.support:gridlayout-v7:${android["VSupportSdk"]}",
+
+            "butterknife-apt"                : "com.jakewharton:butterknife-compiler:8.4.0",
+            //Klog日志工具
+            "klog"                           : 'com.github.zhaokaiqiang.klog:library:1.6.0',
+            "eventbus"                       : "org.greenrobot:eventbus:3.1.1",
+            "glide"                          : "com.github.bumptech.glide:glide:3.7.0",
+            "glide-transformations"          : 'jp.wasabeef:glide-transformations:2.0.1',
+            "picasso"                        : "com.squareup.picasso:picasso:2.5.2",
+            "xrecyclerview"                  : "com.github.limedroid:ARecyclerView:v1.1.5",
+            "avi-loading"                    : "com.wang.avi:library:2.1.3",
+            "PhotoView"                      : 'com.github.chrisbanes:PhotoView:2.1.3',
+            //侧滑菜单
+            "EasySwipeMenuLayout"            : 'com.github.anzaizai:EasySwipeMenuLayout:1.1.2',
+            "BaseRecyclerViewAdapterHelper"  : 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30',
+            //Tablayout
+            "FlycoTabLayout_Lib"             : "com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar",
+            "FlycoRoundView_Lib"             : 'com.flyco.roundview:FlycoRoundView_Lib:1.1.4@aar',
+            "FlycoPageIndicator_Lib"         : 'com.flyco.pageindicator:FlycoPageIndicator_Lib:1.0.0@aar',
+            //NineOldAndroids
+            "nineoldandroids"                : 'com.nineoldandroids:library:2.4.0',
+            "banner"                         : 'com.youth.banner:banner:1.4.10',
+            //数字进度条
+            "numberprogressbar"              : 'com.daimajia.numberprogressbar:library:1.4@aar',
+            //viewpager 指示器
+            "pageindicatorview"              : 'com.romandanylyk:pageindicatorview:0.2.0@aar',
+            //悬浮title expandableListView
+            "FloatingGroupExpandableListView": 'com.diegocarloslima:fgelv:0.1.+@aar',
+            //图表框架
+            "MPAndroidChart"                 : 'com.github.PhilJay:MPAndroidChart:v3.0.3',
+
+            "systembartint"                  : 'com.readystatesoftware.systembartint:systembartint:1.0.3',
+            "gson"                           : "com.google.code.gson:gson:2.6.2",
+            "rxjava"                         : "io.reactivex.rxjava2:rxjava:2.0.1",
+            "retrofit-converter-gson"        : "com.squareup.retrofit2:converter-gson:${android["VRetrofitSdk"]}",
+            "retrofit-adapter-rxjava"        : "com.squareup.retrofit2:adapter-rxjava2:${android["VRetrofitSdk"]}",
+            "okhttp3"                        : "com.squareup.okhttp3:okhttp:${android["VOkhttp"]}",
+            "rxlifecycle"                    : "com.trello.rxlifecycle2:rxlifecycle:${android["VRxlifecycle"]}",
+            "rxlifecycle-android"            : "com.trello.rxlifecycle2:rxlifecycle-android:${android["VRxlifecycle"]}",
+            "rxlifecycle-components"         : "com.trello.rxlifecycle2:rxlifecycle-components:${android["VRxlifecycle"]}",
+            "rxpermissions"                  : "com.tbruyelle.rxpermissions2:rxpermissions:0.9.3@aar",
+
+            "canary-debug"                   : "com.squareup.leakcanary:leakcanary-android:1.4-beta2",
+            "canary-release"                 : "com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2",
+    ]
+}

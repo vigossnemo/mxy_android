@@ -1,0 +1,4 @@
+KEYSTORE密码：zhinengshuibiao2017
+别名：智能水表
+KEY密码：zhinengshuibiao2017
+
