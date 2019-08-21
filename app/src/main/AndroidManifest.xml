@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.gurunzhixun.watermeter">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 个推需要的权限 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 支持iBeancon 需要蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 支持个推3.0 电子围栏功能 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 浮动通知权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="getui.permission.GetuiService.${applicationId}" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!--扫一扫权限-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIDOWNLOAD_WITHOUT_NOTIFICATIONGHT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission." />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".MainApplicaton"
+        android:allowBackup="true"
+        android:icon="@mipmap/desktop_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/desktop_launcher"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".modules.hy.activity.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NotitleThemeFullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".wxapi.WXPayEntryActivity" android:exported="true"></activity>
+        <service android:name="com.gurunzhixun.watermeter.UPMeterDataService" />
+        <service android:name="com.gurunzhixun.watermeter.UPCBMeterDataService" />
+        <service android:name="com.gurunzhixun.watermeter.DownLoadService" />
+        <activity
+            android:name=".modules.hy.activity.AboutMeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.yhdl.activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.yhdl.activity.YHDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.yhdl.activity.YHEditActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.yhzc.activity.RegistActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.gl.activity.NotifysActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.sbcz.activity.WDQBActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.sbcz.activity.JLListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.sbcz.activity.YHCZActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.yhcz.activity.SBCZActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.yhcz.activity.SBCBActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.gl.activity.JZCBActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.gl.activity.CZActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.gl.activity.YHLBActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.gl.activity.YHADDActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.gl.activity.HBActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.gl.activity.CZBListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.gl.activity.JFListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.gl.activity.SBMLActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.gl.activity.SBHBActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.gl.activity.YHDataEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.gl.activity.YHEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.yhcz.activity.SBCZSettingActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.yhcz.activity.JXSBCZSettingActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.mmgl.activity.ForgetPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.sp.activity.SPActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.sbgl.acticity.ADDDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.sbgl.acticity.SBGLActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.sbgl.acticity.ADDSBActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.sbgl.acticity.SBDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.sbgl.acticity.SBEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.sbgl.acticity.JGDetailActivity"
+            android:screenOrientation="portrait" />
+        <!-- 适配全面屏手机 18:9屏幕 -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.2" />
+
+        <activity
+            android:name=".modules.sz.activity.UpdatePwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.sz.activity.MessageSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.sz.activity.UpdatePhoneNumActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".modules.grzl.acticity.GRZLEditActivity"
+            android:screenOrientation="portrait" />
+
+
+        <!-- 适配7.0以后安装apk -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.gurunzhixun.watermeter.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="name,authorities,exported,grantUriPermissions">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path"
+                tools:replace="name,resource" />
+        </provider>
+        <!-- ====================provider====================== -->
+
+        <activity
+            android:name=".modules.yhdl.activity.WebsiteLoginActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.hdym.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <receiver android:name=".NetWorkStateReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".AppRegister">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+        <!--value的值填写你在友盟后台申请的应用Appkey-->
+        <meta-data android:value="@string/UMENG_APPKEY" android:name="UMENG_APPKEY"/>
+    </application>
+
+</manifest>
